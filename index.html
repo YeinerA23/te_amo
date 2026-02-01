@@ -525,7 +525,7 @@
             <h1>Para Ti, Noviecita ❤️</h1>
             <p>Un espacio especial creado con todo mi corazón</p>
             <div class="scroll-hint">
-                <p>↓ Desliza ↓</p>
+                <p>↓ Desliza hacia abajo ↓</p>
             </div>
         </div>
     </section>
@@ -632,15 +632,15 @@
 
     <section class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
         <div class="content-box">
-            <h2>50 Cosas Que Me Gustan De Ti 💕</h2>
+            <h2>40 Cosas Que Me Gustan De Ti 💕</h2>
             <p style="text-align: center;">Cada una de estas razones hace que te ame más cada día</p>
             
             <div class="reasons-container">
                 <div class="reasons-display">
                     <div class="hearts-decoration left">💕</div>
                     <div class="hearts-decoration right">💕</div>
-                    <div class="reason-number" id="reasonNumber">Razón 1 de 50</div>
-                    <div class="reason-text" id="reasonText">La forma en que me miras</div>
+                    <div class="reason-number" id="reasonNumber">Razón 1 de 40</div>
+                    <div class="reason-text" id="reasonText">Tus ojos</div>
                 </div>
 
                 <div class="reasons-controls">
@@ -850,30 +850,27 @@
 
         let currentReasonIndex = 0;
         const reasons = [
-            "La forma en que me miras",
-            "Tu olor que me encanta",
-            "Cómo me abrazas cuando más lo necesito",
-            "Tu manera única de ser tú misma",
-            "Los pequeños detalles que tienes conmigo",
-            "Tu voz",
             "Tus ojos",
+            "Tu voz",
+            "Tu olor",
+            "Tus abrazos",
+            "Tu manera única de ser tú misma",
+            "La forma en que me miras",
             "La pasión que pones en todo lo que haces",
             "Tu forma de caminar con tanta seguridad",
             "Cómo te preocupas por mí",
             "Tu cabello que siempre se ve perfecto",
             "La manera en que dices mi nombre",
             "Tu humor",
-            "Tu figura",
-            "Cómo me haces sentir amado cada día",
+            "Tu cuerpo",
+            "Cómo me haces sentir cada día",
             "Tu inteligencia que me fascina",
             "Tu bondad y generosidad infinita",
-            "Cómo me apoyas",
-            "Tu estilo único al vestir",
+            "Tu estilo al vestir",
             "La forma en que puedo hablar contigo",
-            "Tu paciencia conmigo siempre",
             "Cómo me inspiras a ser mejor",
             "Tu fuerza en momentos difíciles",
-            "Tu forma de hacerme sentir seguro",
+            "La manera en que me haces sentir único",
             "Tu creatividad que no tiene límites",
             "Cómo me comprendes sin palabras",
             "Tu cara cuando estás dormida",
@@ -881,22 +878,15 @@
             "Tu amor por las cosas simples",
             "Que aguantas mi humor",
             "Tu honestidad y transparencia",
-            "La forma en que cuidas de mí",
+            "Tu cara enojada",
             "Tu determinación para lograr tus metas",
             "Cómo me escuchas de verdad",
             "Tu resiliencia",
-            "La manera en que expresas tu amor",
-            "Tu entusiasmo por la vida",
             "Cómo haces que todo sea especial",
-            "Tu corazón tan noble y puro",
-            "La forma en que me sorprendes",
-            "Tu valentía al enfrentar desafíos",
             "Cómo iluminas cualquier lugar",
-            "Tu espontaneidad que amo tanto",
-            "La manera en que me haces sentir único",
-            "Tu dulzura en cada gesto",
             "Cómo compartes tus sueños conmigo",
-            "Tu belleza interior y exterior",
+            "Que eres mi sueño hecho realidad",
+            "Que me haces querer ser mejor persona",
             "Tus besos",
             "TUS TETAS 😌",
             "Simplemente todo de ti, porque eres perfecta para mí"
@@ -912,25 +902,25 @@
 
             setTimeout(() => {
                 reasonText.textContent = reasons[currentReasonIndex];
-                reasonNumber.textContent = `Razón ${currentReasonIndex + 1} de 50`;
-                progressFill.style.width = ((currentReasonIndex + 1) / 50) * 100 + '%';
+                reasonNumber.textContent = `Razón ${currentReasonIndex + 1} de 40`;
+                progressFill.style.width = ((currentReasonIndex + 1) / 40) * 100 + '%';
                 reasonText.style.opacity = '1';
                 reasonText.style.transform = 'scale(1)';
             }, 200);
         }
 
         function nextReason() {
-            currentReasonIndex = (currentReasonIndex + 1) % 50;
+            currentReasonIndex = (currentReasonIndex + 1) % 40;
             updateReason();
         }
 
         function previousReason() {
-            currentReasonIndex = (currentReasonIndex - 1 + 50) % 50;
+            currentReasonIndex = (currentReasonIndex - 1 + 40) % 40;
             updateReason();
         }
 
         function randomReason() {
-            currentReasonIndex = Math.floor(Math.random() * 50);
+            currentReasonIndex = Math.floor(Math.random() * 40);
             updateReason();
         }
 
