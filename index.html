@@ -159,16 +159,39 @@
             .content-box p { font-size: 1em; }
             .final-message { font-size: 1.5em; }
             .audio-btn { padding: 12px 30px; font-size: 1em; }
-            .gallery-btn { padding: 10px 20px; font-size: 1em; }
+            
+            /* Botones de galería más compactos y siempre horizontales */
+            .gallery-btn { 
+                padding: 8px 18px; 
+                font-size: 0.9em;
+                margin: 0 5px;
+            }
+            
+            /* Botón de inicio más pequeño en móviles */
+            .audio-start-btn {
+                padding: 15px 35px;
+                font-size: 1.2em;
+            }
             
             .photo-slide img {
                 height: auto;
-                aspect-ratio: 4 / 3;
+                max-height: 400px;
                 object-fit: cover;
             }
             
+            /* Mostrar captions en móviles */
             .photo-caption {
-                display: none;
+                display: block;
+                padding: 20px;
+                margin-top: 15px;
+            }
+            
+            .photo-caption h3 {
+                font-size: 1.3em;
+            }
+            
+            .photo-caption p {
+                font-size: 0.95em;
             }
         }
 
@@ -177,14 +200,39 @@
             .hero p { font-size: 1em; }
             .content-box h2 { font-size: 1.5em; }
             .section { padding: 30px 15px; }
-            .gallery-btn { padding: 8px 15px; font-size: 0.9em; }
             
-            .photo-slide img {
-                aspect-ratio: 4 / 3;
+            /* Botones más compactos y siempre horizontales */
+            .gallery-btn { 
+                padding: 8px 12px; 
+                font-size: 0.85em;
+                margin: 0 3px;
             }
             
+            /* Botón de inicio aún más pequeño en móviles pequeños */
+            .audio-start-btn {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+            
+            .photo-slide img {
+                max-height: 350px;
+                object-fit: cover;
+            }
+            
+            /* Captions visibles y ajustados */
             .photo-caption {
-                display: none;
+                display: block;
+                padding: 15px;
+                margin-top: 12px;
+            }
+            
+            .photo-caption h3 {
+                font-size: 1.1em;
+                margin-bottom: 5px;
+            }
+            
+            .photo-caption p {
+                font-size: 0.85em;
             }
         }
 
@@ -277,9 +325,8 @@
 
         .photo-slide {
             display: none;
-            position: relative;
             border-radius: 20px;
-            overflow: hidden;
+            overflow: visible;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
         }
 
@@ -293,27 +340,30 @@
             height: 500px;
             object-fit: cover;
             display: block;
+            border-radius: 20px;
         }
 
+        /* TEXTOS DEBAJO DE LA FOTO */
         .photo-caption {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, transparent 100%);
-            padding: 30px;
-            color: white;
+            position: relative;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            margin-top: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .photo-caption h3 {
             font-size: 1.8em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             margin-bottom: 10px;
+            color: #fff;
         }
 
         .photo-caption p {
             font-size: 1.1em;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.95);
             text-align: left;
         }
 
@@ -525,7 +575,7 @@
             <h1>Para Ti, Noviecita ❤️</h1>
             <p>Un espacio especial creado con todo mi corazón</p>
             <div class="scroll-hint">
-                <p>↓ Desliza ↓</p>
+                <p>↓ Desliza hacia abajo ↓</p>
             </div>
         </div>
     </section>
@@ -534,7 +584,7 @@
         <div class="content-box">
             <h2>Una Carta Para Ti</h2>
             <div class="audio-player">
-                <button class="audio-btn" onclick="playAudio(1)">🎵 Escuchar </button>
+                <button class="audio-btn" onclick="playAudio(1)">🎵 Escuchar mi mensaje</button>
             </div>
             <p>
                Me gustas, pero no de esos gustos que van y vienen; me gustas con calma, con intención y con ganas de quedarme. Me gusta quién eres, no una idea ni un momento, tú tal cual, con lo que eres hoy y con lo que estás construyendo.
@@ -882,14 +932,14 @@
             "Tu determinación para lograr tus metas",
             "Cómo me escuchas de verdad",
             "Tu resiliencia",
+            "Tus besos",
+            "TUS TETAS 😌",
+            "Simplemente todo de ti, porque eres perfecta para mí",
             "Cómo haces que todo sea especial",
             "Cómo iluminas cualquier lugar",
             "Cómo compartes tus sueños conmigo",
             "Que eres mi sueño hecho realidad",
-            "Que me haces querer ser mejor persona",
-            "Tus besos",
-            "TUS TETAS 😌",
-            "Simplemente todo de ti, porque eres perfecta para mí"
+            "Que me haces querer ser mejor persona"
         ];
 
         function updateReason() {
@@ -940,4 +990,3 @@
     </script>
 </body>
 </html>
-
