@@ -159,13 +159,7 @@
             .content-box p { font-size: 1em; }
             .final-message { font-size: 1.5em; }
             .audio-btn { padding: 12px 30px; font-size: 1em; }
-            
-            /* Botones de galería más compactos y siempre horizontales */
-            .gallery-btn { 
-                padding: 8px 18px; 
-                font-size: 0.9em;
-                margin: 0 5px;
-            }
+            .gallery-btn { padding: 10px 20px; font-size: 1em; }
             
             /* Botón de inicio más pequeño en móviles */
             .audio-start-btn {
@@ -175,7 +169,7 @@
             
             .photo-slide img {
                 height: auto;
-                max-height: 400px;
+                aspect-ratio: 4 / 3;
                 object-fit: cover;
             }
             
@@ -183,7 +177,6 @@
             .photo-caption {
                 display: block;
                 padding: 20px;
-                margin-top: 15px;
             }
             
             .photo-caption h3 {
@@ -200,13 +193,7 @@
             .hero p { font-size: 1em; }
             .content-box h2 { font-size: 1.5em; }
             .section { padding: 30px 15px; }
-            
-            /* Botones más compactos y siempre horizontales */
-            .gallery-btn { 
-                padding: 8px 12px; 
-                font-size: 0.85em;
-                margin: 0 3px;
-            }
+            .gallery-btn { padding: 8px 15px; font-size: 0.9em; }
             
             /* Botón de inicio aún más pequeño en móviles pequeños */
             .audio-start-btn {
@@ -215,15 +202,13 @@
             }
             
             .photo-slide img {
-                max-height: 350px;
-                object-fit: cover;
+                aspect-ratio: 4 / 3;
             }
             
             /* Captions visibles y ajustados */
             .photo-caption {
                 display: block;
                 padding: 15px;
-                margin-top: 12px;
             }
             
             .photo-caption h3 {
@@ -325,8 +310,9 @@
 
         .photo-slide {
             display: none;
+            position: relative;
             border-radius: 20px;
-            overflow: visible;
+            overflow: hidden;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
         }
 
@@ -340,30 +326,27 @@
             height: 500px;
             object-fit: cover;
             display: block;
-            border-radius: 20px;
         }
 
-        /* TEXTOS DEBAJO DE LA FOTO */
         .photo-caption {
-            position: relative;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            padding: 25px;
-            margin-top: 20px;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, transparent 100%);
+            padding: 30px;
+            color: white;
         }
 
         .photo-caption h3 {
             font-size: 1.8em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             margin-bottom: 10px;
-            color: #fff;
         }
 
         .photo-caption p {
             font-size: 1.1em;
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
             text-align: left;
         }
 
