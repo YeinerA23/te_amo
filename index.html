@@ -173,18 +173,9 @@
                 object-fit: cover;
             }
             
-            /* Mostrar captions en móviles */
+            /* Ocultar captions en móviles */
             .photo-caption {
-                display: block;
-                padding: 20px;
-            }
-            
-            .photo-caption h3 {
-                font-size: 1.3em;
-            }
-            
-            .photo-caption p {
-                font-size: 0.95em;
+                display: none;
             }
         }
 
@@ -205,19 +196,9 @@
                 aspect-ratio: 4 / 3;
             }
             
-            /* Captions visibles y ajustados */
+            /* Captions ocultos en móviles pequeños también */
             .photo-caption {
-                display: block;
-                padding: 15px;
-            }
-            
-            .photo-caption h3 {
-                font-size: 1.1em;
-                margin-bottom: 5px;
-            }
-            
-            .photo-caption p {
-                font-size: 0.85em;
+                display: none;
             }
         }
 
